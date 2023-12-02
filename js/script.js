@@ -2,13 +2,7 @@ searchForm = document.querySelector(".search-form");
 document.querySelector("#search-btn").onclick = () => {
   searchForm.classList.toggle("active");
 };
-let loginForm = document.querySelector(".login-form-container");
-document.querySelector("#login-btn").onclick = () => {
-  loginForm.classList.toggle("active");
-};
-document.querySelector("#close-login-btn").onclick = () => {
-  loginForm.classList.remove("active");
-};
+
 window.onscroll = () => {
   searchForm.classList.remove("active");
   if (window.scrollY > 80) {
@@ -43,33 +37,6 @@ var swiper = new Swiper(".books-slider", {
     },
   },
 });
-var swiper = new Swiper(".featured-slider", {
-  spaceBetween: 10,
-  loop: true,
-  centeredSlides: true,
-  autoplay: {
-    delay: 6000,
-    disableOnInteraction: false,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  breakpoints: {
-    0: {
-      slidesPerView: 1,
-    },
-    450: {
-      slidesPerView: 2,
-    },
-    768: {
-      slidesPerView: 3,
-    },
-    1024: {
-      slidesPerView: 4,
-    },
-  },
-});
 var swiper = new Swiper(".arrivals-slider", {
   spaceBetween: 10,
   loop: true,
@@ -92,7 +59,7 @@ var swiper = new Swiper(".arrivals-slider", {
 });
 var swiper = new Swiper(".reviews-slider", {
   spaceBetween: 10,
-  grabCursor:true,
+  grabCursor: true,
   loop: true,
   centeredSlides: true,
   autoplay: {
@@ -113,7 +80,7 @@ var swiper = new Swiper(".reviews-slider", {
 });
 var swiper = new Swiper(".blogs-slider", {
   spaceBetween: 10,
-  grabCursor:true,
+  grabCursor: true,
   loop: true,
   centeredSlides: true,
   autoplay: {
