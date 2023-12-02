@@ -31,6 +31,7 @@ body {
 }
 .header-cart .shopping img {
   width: 50px;
+  cursor: pointer;
 }
 .header-cart .shopping span {
   background: red;
@@ -40,7 +41,7 @@ body {
   align-items: center;
   color: #fff;
   position: absolute;
-  top: -5px;
+  top: 0;
   left: 80%;
   padding: 3px 10px;
 }
@@ -191,4 +192,17 @@ body {
 }
 .listCard .count {
   margin: 0 10px;
+}
+@media (max-width: 450px) {
+  .card {
+    position: fixed;
+    top: 0;
+
+    width: 100%;
+    height: calc(100vh - 52px);
+    background-color: var(--black);
+  }
+  .active .card {
+    left: 0;
+  }
 }
