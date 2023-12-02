@@ -1,17 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
 /* Start Variables */
 :root {
   --green: #27ae60;
   --dark-color: #219150;
   --black: #444;
   --light-colr: #666;
-  --border: 0.1rem solid rgba(0, 0, 0, 0.1);
-  --border-hover: 0.1rem solid var(black);
+  --border-hover: 0.1rem solid rgba(0, 0, 0, 0.1);
+  --border: 0.1rem solid var(black);
   --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 /* End Variables */
-/* Start Variables */
 /* Start Glabal Rules */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
 * {
   font-family: "Poppins", san-serif;
   -webkit-box-sizing: border-box;
@@ -236,6 +235,8 @@ section {
   z-index: 10000;
   height: 100%;
   width: 100%;
+  transition-timing-function: ease-out;
+  transition-duration: 0.5s;
 }
 .login-form-container.active {
   right: 0;
@@ -364,7 +365,6 @@ section {
   line-height: 2;
   padding: 1rem 0;
 }
-
 /* End Home */
 /* Start Icons Container */
 .icons-container {
@@ -409,7 +409,7 @@ section {
   padding: 1rem;
   background: linear-gradient(15deg, #eee 30%, #fff 30.1%);
 }
-.featured .featured-slider .box:hover .image {
+.featured .featured-slider .box:hover .icons {
   transform: translateY(6rem);
   -webkit-transform: translateY(6rem);
   -moz-transform: translateY(6rem);
@@ -492,6 +492,237 @@ section {
   color: #fff;
 }
 /* End Featured Section */
+/* Start Featured Section */
+.newsletter {
+  background: url(../images/letter-bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.newsletter form {
+  max-width: 45rem;
+  margin-left: auto;
+  text-align: center;
+  padding: 5rem 0;
+}
+.newsletter form h3 {
+  font-size: 2.2rem;
+  color: #fff;
+  padding-bottom: 0.7rem;
+  font-weight: normal;
+}
+.newsletter form .box {
+  width: 100%;
+  margin: 0.7rem 0;
+  padding: 1rem 1.2rem;
+  font-size: 1.6rem;
+  color: var(--black);
+  border-radius: 0.5rem;
+  text-transform: none;
+}
+/* End Featured Section */
+/* Start arrivals Section */
+.arrivals .arrivals-slider .box {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+  border: var(--border);
+  margin: 1rem 0;
+}
+.arrivals .arrivals-slider .box:hover {
+  border: var(--border-hover);
+}
+.arrivals .arrivals-slider .box .image img {
+  height: 15rem;
+  border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  -ms-border-radius: 0.3rem;
+  -o-border-radius: 0.3rem;
+  -webkit-border-radius: 0.3rem;
+  box-shadow: var(--box-shadow);
+}
+.arrivals .arrivals-slider .box .content h3 {
+  font-size: 2rem;
+  color: var(--black);
+}
+.arrivals .arrivals-slider .box .content .price {
+  font-size: 2.2rem;
+  color: var(--black);
+  padding-bottom: 0.5rem;
+}
+.arrivals .arrivals-slider .box .content .price span {
+  font-size: 1.5rem;
+  color: var(--light-color);
+  text-decoration: line-through;
+}
+.arrivals .arrivals-slider .box .content .stars i {
+  font-size: 1.5rem;
+  color: var(--green);
+}
+/* End arrivals Section */
+/* Start deal Section */
+.deal {
+  background: #f3f3f3;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.deal .content {
+  flex: 1 1 42rem;
+}
+.deal .image {
+  flex: 1 1 42rem;
+}
+.deal .image img {
+  width: 100%;
+}
+.deal .content h3 {
+  color: var(--green);
+  font-size: 2.5rem;
+  padding-bottom: 0.5rem;
+}
+.deal .content h1 {
+  color: var(--black);
+  font-size: 4rem;
+}
+.deal .content p {
+  padding: 1rem 0;
+  color: var(--light-color);
+  font-size: 1.4rem;
+  line-height: 2;
+}
+/* End deal Section */
+/* start review Section */
+.reviews .reviews-slider .box {
+  border: var(--border);
+  padding: 2rem;
+  text-align: center;
+  margin: 2rem 0;
+}
+.reviews .reviews-slider .box:hover {
+  border: var(--border-hover);
+}
+.reviews .reviews-slider .box img {
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.reviews .reviews-slider .box h3 {
+  color: var(--black);
+  font-size: 2.2rem;
+  padding: 0.5rem 0;
+}
+.reviews .reviews-slider .box p {
+  color: var(--light-color);
+  font-size: 1.4rem;
+  padding: 1rem 0;
+  line-height: 2;
+}
+.reviews .reviews-slider .box .stars i {
+  font-size: 1.7rem;
+  color: (--green);
+}
+/* End review Section */
+/* Start blogs Section */
+.blogs .blogs-slider .box {
+  margin: 2rem 0;
+  border: var(--border);
+}
+.blogs .blogs-slider .box:hover {
+  border: var(--border-hover);
+}
+.blogs.blogs-slider .box .image {
+  height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+.blogs .blogs-slider .box .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition-duration: 0.5s;
+}
+.blogs .blogs-slider .box:hover {
+  transform: scale(1.02);
+  -webkit-transform: scale(1.02);
+  -moz-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  -o-transform: scale(1.02);
+  border: var(--border-hover);
+}
+.blogs .blogs-slider .box .content {
+  padding: 1.5rem;
+}
+.blogs .blogs-slider .box .content h3 {
+  font-size: 2.2rem;
+  color: var(--black);
+}
+.blogs .blogs-slider .box .content p {
+  font-size: 1.4rem;
+  color: var(--light-color);
+  padding: 1rem 0;
+  line-height: 2;
+}
+/* End blogs Section */
+/* Start blogs Section */
+.footer .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 1.5rem;
+}
+.footer .box-container .box h3 {
+  font-size: 2.2rem;
+  color: var(--black);
+  padding: 1rem 0;
+}
+.footer .box-container .box a {
+  display: block;
+  font-size: 1.4rem;
+  color: var(--light-color);
+  padding: 1rem 0;
+}
+.footer .box-container .box a i {
+  color: var(--green);
+  padding-right: 0.5rem;
+}
+.footer .box-container .box a:hover i {
+  padding-right: 2rem;
+}
+.footer .box-container .box .map {
+  width: 100%;
+}
+.footer .share {
+  padding: 1rem 0;
+  text-align: center;
+}
+.footer .share a {
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  font-size: 2rem;
+  color: #fff;
+  background: var(--green);
+  margin: 0 0.3rem;
+  border-radius: 50%;
+}
+.footer .share a:hover {
+  background: var(--black);
+}
+.footer .credit {
+  border-top: var(--border);
+  margin-top: 2rem;
+  padding: 0 1rem;
+  padding-top: 2.5rem;
+  font-size: 2rem;
+  color: var(--light-color);
+  text-align: center;
+}
+.footer .credit span {
+  color: var(--green);
+}
+/* End blogs Section */
 /* Start Media Queries */
 @media (max-width: 991px) {
   html {
@@ -539,6 +770,13 @@ section {
   }
   .home .row .content h3 {
     font-size: 3.5rem;
+  }
+  .newsletter {
+    background-position: right;
+  }
+  .newsletter form {
+    margin-left: 0;
+    max-width: 100%;
   }
 }
 @media (max-width: 450px) {
